@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+:root {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #172033;
+	background: #f5f7fb;
+}
+
+body {
+	display: grid;
+	min-height: 100vh;
+	margin: 0;
+	place-items: center;
+}
+
+.ryomen {
+	margin: 0;
+	color: red;
+	font-size: clamp(3rem, 12vw, 7rem);
+	font-weight: 800;
+	letter-spacing: -0.06em;
+}
