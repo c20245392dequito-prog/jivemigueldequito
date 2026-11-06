@@ -1,0 +1,62 @@
+
+---
+import "../styles/global.css";
+
+const name = "Jive Miguel Dequito";
+---
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{name}</title>
+</head>
+
+<body class="bg-white text-black dark:bg-gray-950 dark:text-white">
+
+    <!-- HEADER -->
+    <header class="flex items-center justify-between bg-slate-200 px-4 py-3 dark:bg-gray-800">
+
+        <h2 class="font-bold text-base">
+            {name}
+        </h2>
+
+        <!-- NAVIGATION -->
+        <nav class="flex gap-5 text-xs">
+            <a href="#about">About</a>
+            <a href="#work">Work</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <!-- DARK MODE BUTTON -->
+        <button
+            id="darkModeToggle"
+            class="rounded-md border border-slate-400 px-3 py-2 text-xs"
+        >
+            Toggle Dark Mode
+        </button>
+
+    </header>
+
+    <!-- CONTENT -->
+    <main>
+        <slot />
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-200 py-8 text-center text-xs dark:bg-gray-800">
+        © 2026 {name}. Built with Astro and Tailwind CSS.
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const button = document.getElementById("darkModeToggle");
+
+        button?.addEventListener("click", () => {
+            document.documentElement.classList.toggle("dark");
+        });
+    </script>
+
+</body>
+</html>

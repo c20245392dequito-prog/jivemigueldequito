@@ -1,18 +1,10 @@
 ---
-import "../styles/global.css";
-const name = "Ryomen";
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{name}</title>
-	</head>
-	<body>
-		<h1 class="ryomen">{name}</h1>
-	</body>
-</html>
+<BaseLayout>
+	<section id="about" class="flex min-h-[70vh] flex-col items-center justify-center px-6 text-center">
+		<p class="mb-4 text-sm uppercase tracking-[0.3em] text-red-800 dark:text-red-400">Professional Portfolio</p>
+		<h1 class="text-4xl font-bold text-red-800 dark:text-red-400 md:text-6xl">Jive Miguel Dequito</h1>
+	</section>
+</BaseLayout>
